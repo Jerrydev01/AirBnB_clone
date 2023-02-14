@@ -1,12 +1,19 @@
-#!/usr/bin/python3
-"""Defines the State class."""
+#!/usr/bin/env python3
+# state.py
+
+""" Defines the State Class """
 from models.base_model import BaseModel
 
 
 class State(BaseModel):
-    """Represent a state.
-    Attributes:
-        name (str): The name of the state.
-    """
+    """ Inherits from the BaseModel class """
 
-    name = ""
+    name = ''
+
+    def __init__(self, *args, **kwargs):
+        """ Initialises the State class
+            Args:
+                args: Not used
+                kwargs: dictionary format of the class
+        """
+        super().__init__(*args, **kwargs)
